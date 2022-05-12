@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="applicationfxcovid.FXMLDocumentController">
+   <children>
+      <TableView fx:id="table" layoutX="8.0" layoutY="154.0" prefHeight="450.0" prefWidth="582.0" stylesheets="@dash.css">
+         <columns>
+            <TableColumn fx:id="pays" prefWidth="75.0" text="Pays" />
+            <TableColumn fx:id="cas" prefWidth="75.0" text="Cas" />
+            <TableColumn fx:id="Vac" prefWidth="75.0" text="Guerisons" />
+            <TableColumn fx:id="deces" prefWidth="75.0" text="Deces" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <ComboBox fx:id="cmb" layoutX="77.0" layoutY="111.0" prefHeight="26.0" prefWidth="202.0" />
+      <ImageView fitHeight="22.0" fitWidth="19.0" layoutX="569.0" layoutY="-1.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@close.png" />
+         </image>
+      </ImageView>
+      <FontAwesomeIconView fill="PURPLE" glyphName="SEARCH" layoutX="326.0" layoutY="133.0" onMouseClicked="#recherche" size="26" />
+      <Label layoutX="28.0" layoutY="38.0" text="Statistiques génerales" textFill="PURPLE">
+         <font>
+            <Font name="Microsoft YaHei UI Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
